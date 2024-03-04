@@ -3,13 +3,36 @@ import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
 import Date from '../../components/date';
 import utilStyles from '../../styles/utils.module.css';
+import { NextSeo } from 'next-seo';
+import React from 'react';
 
 export default function Post({ postData }) {
   return (
     <Layout>
-      <Head>
-        <title>{postData.title}</title>
-      </Head>
+      <NextSeo
+        title="Title next seo"
+        description="Desc next seo"
+        openGraph={{
+          type: 'website',
+          url: 'https://www.example.com/page',
+          title: 'Title next seo',
+          description: 'Desc next seo',
+          images: [
+            {
+              url: 'https://www.example.ie/og-image.jpg',
+              width: 800,
+              height: 600,
+              alt: 'Og Image Alt',
+            },
+            {
+              url: 'https://www.example.ie/og-image-2.jpg',
+              width: 800,
+              height: 600,
+              alt: 'Og Image Alt 2',
+            },
+          ],
+        }}
+      />
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
         <div className={utilStyles.lightText}>
