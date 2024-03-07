@@ -19,13 +19,13 @@ export default function Post({ postData }) {
           description: 'Desc next seo',
           images: [
             {
-              url: 'https://www.example.ie/og-image.jpg',
+              url: '/favicon',
               width: 800,
               height: 600,
               alt: 'Og Image Alt',
             },
             {
-              url: 'https://www.example.ie/og-image-2.jpg',
+              url: '/favicon',
               width: 800,
               height: 600,
               alt: 'Og Image Alt 2',
