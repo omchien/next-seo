@@ -1,7 +1,6 @@
 import { DefaultSeo } from 'next-seo';
 import '../styles/global.css';
 import React from 'react';
-
 export default function App({ Component, pageProps }) {
   const defaultConfig = {
     additionalLinkTags: [
@@ -14,17 +13,17 @@ export default function App({ Component, pageProps }) {
         href: '/favicon.ico',
       },
     ],
-    images: [
-      {
-        url: '/images/default/jpg',
-        width: 800,
-        height: 600,
-        alt: 'favicon',
-      },
-    ],
     openGraph: {
       type: 'website',
       locale: 'vi_VN',
+      images: [
+        {
+          url: '/images/default.jpg',
+          width: 800,
+          height: 600,
+          alt: 'favicon',
+        },
+      ],
     },
   };
 
