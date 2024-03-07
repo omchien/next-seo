@@ -8,26 +8,8 @@ import { getSortedPostsData } from '../lib/posts';
 import utilStyles from '../styles/utils.module.css';
 
 export default function Home({ allPostsData }) {
-  const defaultConfig = {
-    additionalLinkTags: [
-      {
-        rel: 'shortcut icon',
-        href: '/favicon.ico',
-      },
-      {
-        rel: 'icon',
-        href: '/favicon.ico',
-      },
-    ],
-    openGraph: {
-      type: 'website',
-      locale: 'vi_VN',
-    },
-  };
-
   return (
     <Layout home>
-      <DefaultSeo {...defaultConfig} />
       <section className={utilStyles.headingMd}>
         <p>Test Next SEO description</p>
         <p>
