@@ -14,17 +14,17 @@ export default function App({ Component, pageProps }) {
         href: '/favicon.ico',
       },
     ],
+    images: [
+      {
+        url: '/images/default/jpg',
+        width: 800,
+        height: 600,
+        alt: 'favicon',
+      },
+    ],
     openGraph: {
       type: 'website',
       locale: 'vi_VN',
-      images: [
-        {
-          url: '/favicon',
-          width: 800,
-          height: 600,
-          alt: 'favicon',
-        },
-      ],
     },
   };
 
