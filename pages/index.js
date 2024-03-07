@@ -1,16 +1,33 @@
-import Head from 'next/head';
-import Layout, { siteTitle } from '../components/layout';
-import utilStyles from '../styles/utils.module.css';
-import { getSortedPostsData } from '../lib/posts';
+import { DefaultSeo } from 'next-seo';
 import Link from 'next/link';
+import React from 'react';
+
 import Date from '../components/date';
+import Layout from '../components/layout';
+import { getSortedPostsData } from '../lib/posts';
+import utilStyles from '../styles/utils.module.css';
 
 export default function Home({ allPostsData }) {
+  const defaultConfig = {
+    additionalLinkTags: [
+      {
+        rel: 'shortcut icon',
+        href: '/favicon.ico',
+      },
+      {
+        rel: 'icon',
+        href: '/favicon.ico',
+      },
+    ],
+    openGraph: {
+      type: 'website',
+      locale: 'vi_VN',
+    },
+  };
+
   return (
     <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
+      <DefaultSeo {...defaultConfig} />
       <section className={utilStyles.headingMd}>
         <p>Test Next SEO description</p>
         <p>
