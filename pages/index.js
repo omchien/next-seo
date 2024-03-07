@@ -11,7 +11,7 @@ export default function Home({ allPostsData }) {
   return (
     <Layout home>
       <section className={utilStyles.headingMd}>
-        <p>Test Next SEO description</p>
+        <p>Test Next SEO desc</p>
         <p>
           (This is a sample website - you’ll be building a site like this in{' '}
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
